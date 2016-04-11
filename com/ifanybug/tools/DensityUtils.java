@@ -1,13 +1,8 @@
-package com.ifanybug.skipify.where.tools;
+package com.ifanybug.tools;
 
-/**
- * Created by admin on 2015/12/19.
- */
 
 import android.content.Context;
 import android.util.TypedValue;
-
-import com.ifanybug.skipify.where.MyApplication;
 
 /**
  * 常用单位转换的辅助类
@@ -31,7 +26,7 @@ public class DensityUtils
      */
     public static int dp2px(float dpVal)
     {
-        Context context = MyApplication.getContext();
+        Context context = Kudo.getContext();
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
                 dpVal, context.getResources().getDisplayMetrics());
     }
@@ -44,7 +39,7 @@ public class DensityUtils
      */
     public static int sp2px(float spVal)
     {
-        Context context = MyApplication.getContext();
+        Context context = Kudo.getContext();
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,
                 spVal, context.getResources().getDisplayMetrics());
     }
@@ -57,7 +52,7 @@ public class DensityUtils
      */
     public static float px2dp(float pxVal)
     {
-        Context context = MyApplication.getContext();
+        Context context = Kudo.getContext();
         final float scale = context.getResources().getDisplayMetrics().density;
         return (pxVal / scale);
     }
@@ -70,7 +65,7 @@ public class DensityUtils
      */
     public static float px2sp(float pxVal)
     {
-        Context context = MyApplication.getContext();
+        Context context = Kudo.getContext();
         return (pxVal / context.getResources().getDisplayMetrics().scaledDensity);
     }
 

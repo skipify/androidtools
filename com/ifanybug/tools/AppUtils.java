@@ -1,14 +1,10 @@
-package com.ifanybug.skipify.where.tools;
+package com.ifanybug.tools;
 
-/**
- * Created by admin on 2015/12/19.
- */
 
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
-
 /**
  * 跟App相关的辅助类
  *
@@ -20,7 +16,7 @@ public class AppUtils
 
     private AppUtils()
     {
-		/* cannot be instantiated */
+        /* cannot be instantiated */
         throw new UnsupportedOperationException("cannot be instantiated");
 
     }
@@ -28,8 +24,9 @@ public class AppUtils
     /**
      * 获取应用程序名称
      */
-    public static String getAppName(Context context)
+    public static String getAppName()
     {
+        Context context = Kudo.getContext();
         try
         {
             PackageManager packageManager = context.getPackageManager();
@@ -47,11 +44,11 @@ public class AppUtils
     /**
      * [获取应用程序版本名称信息]
      *
-     * @param context
      * @return 当前应用的版本名称
      */
-    public static String getVersionName(Context context)
+    public static String getVersionName()
     {
+        Context context = Kudo.getContext();
         try
         {
             PackageManager packageManager = context.getPackageManager();

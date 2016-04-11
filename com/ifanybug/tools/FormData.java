@@ -1,4 +1,4 @@
-package com.ifanybug.skipify.where.tools;
+package com.ifanybug.tools;
 
 import android.app.Activity;
 import android.widget.EditText;
@@ -6,9 +6,7 @@ import android.widget.EditText;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by admin on 2015/12/29.
- */
+
 public class FormData {
     private int[] views;
     private HashMap<String,String> values = new HashMap<>();

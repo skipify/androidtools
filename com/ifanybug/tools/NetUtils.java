@@ -1,8 +1,5 @@
-package com.ifanybug.skipify.where.tools;
+package com.ifanybug.tools;
 
-/**
- * Created by admin on 2015/12/19.
- */
 
 import android.app.Activity;
 import android.content.ComponentName;
@@ -31,9 +28,9 @@ public class NetUtils
      * @param context
      * @return
      */
-    public static boolean isConnected(Context context)
+    public static boolean isConnected()
     {
-
+        Context context = Kudo.getContext();
         ConnectivityManager connectivity = (ConnectivityManager) context
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
 
@@ -55,8 +52,10 @@ public class NetUtils
     /**
      * 判断是否是wifi连接
      */
-    public static boolean isWifi(Context context)
+    public static boolean isWifi()
     {
+        Context context = Kudo.getContext();
+
         ConnectivityManager cm = (ConnectivityManager) context
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
 

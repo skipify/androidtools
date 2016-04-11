@@ -1,4 +1,4 @@
-package com.ifanybug.skipify.where.tools;
+package com.ifanybug.tools;
 
 /**
  * Created by admin on 2015/12/19.
@@ -11,8 +11,6 @@ import android.graphics.Rect;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.WindowManager;
-
-import com.ifanybug.skipify.where.MyApplication;
 
 /**
  * 获得屏幕相关的辅助类
@@ -35,7 +33,7 @@ public class ScreenUtils
      */
     public static int getScreenWidth()
     {
-        Context context = MyApplication.getContext();
+        Context context = Kudo.getContext();
         WindowManager wm = (WindowManager) context
                 .getSystemService(Context.WINDOW_SERVICE);
         DisplayMetrics outMetrics = new DisplayMetrics();
@@ -50,7 +48,7 @@ public class ScreenUtils
      */
     public static int getScreenHeight()
     {
-        Context context = MyApplication.getContext();
+        Context context = Kudo.getContext();
         WindowManager wm = (WindowManager) context
                 .getSystemService(Context.WINDOW_SERVICE);
         DisplayMetrics outMetrics = new DisplayMetrics();
@@ -65,7 +63,7 @@ public class ScreenUtils
      */
     public static int getStatusHeight()
     {
-        Context context = MyApplication.getContext();
+        Context context = Kudo.getContext();
         int statusHeight = -1;
         try
         {

@@ -1,13 +1,7 @@
-package com.ifanybug.skipify.where.tools;
-
-/**
- * Created by admin on 2015/12/19.
- */
+package com.ifanybug.tools;
 
 import android.content.Context;
 import android.widget.Toast;
-
-import com.ifanybug.skipify.where.MyApplication;
 
 /**
  * Toast统一管理类
@@ -31,7 +25,7 @@ public class Tt
      */
     public static void showShort(CharSequence message)
     {
-        Context context = MyApplication.getContext();
+        Context context = Kudo.getContext();
         if (isShow)
             Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
@@ -43,7 +37,7 @@ public class Tt
      */
     public static void showShort( int message)
     {
-        Context context = MyApplication.getContext();
+        Context context = Kudo.getContext();
         if (isShow)
             Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
@@ -55,7 +49,7 @@ public class Tt
      */
     public static void showLong( CharSequence message)
     {
-        Context context = MyApplication.getContext();
+        Context context = Kudo.getContext();
         if (isShow)
             Toast.makeText(context, message, Toast.LENGTH_LONG).show();
     }
@@ -67,7 +61,7 @@ public class Tt
      */
     public static void showLong( int message)
     {
-        Context context = MyApplication.getContext();
+        Context context = Kudo.getContext();
         if (isShow)
             Toast.makeText(context, message, Toast.LENGTH_LONG).show();
     }
@@ -80,7 +74,7 @@ public class Tt
      */
     public static void show(CharSequence message, int duration)
     {
-        Context context = MyApplication.getContext();
+        Context context = Kudo.getContext();
         if (isShow)
             Toast.makeText(context, message, duration).show();
     }
@@ -93,7 +87,7 @@ public class Tt
      */
     public static void show( int message, int duration)
     {
-        Context context = MyApplication.getContext();
+        Context context = Kudo.getContext();
         if (isShow)
             Toast.makeText(context, message, duration).show();
     }

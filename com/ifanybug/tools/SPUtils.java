@@ -1,4 +1,4 @@
-package com.ifanybug.skipify.where.tools;
+package com.ifanybug.tools;
 
 /**
  * Created by admin on 2015/12/19.
@@ -6,9 +6,6 @@ package com.ifanybug.skipify.where.tools;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-
-import com.ifanybug.skipify.where.MyApplication;
-
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Map;
@@ -28,7 +25,7 @@ public class SPUtils
      */
     public static void put(String key, Object object)
     {
-        Context context = MyApplication.getContext();
+        Context context = Kudo.getContext();
         SharedPreferences sp = context.getSharedPreferences(FILE_NAME,
                 Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
@@ -65,7 +62,7 @@ public class SPUtils
      */
     public static Object get(String key, Object defaultObject)
     {
-        Context context = MyApplication.getContext();
+        Context context = Kudo.getContext();
         SharedPreferences sp = context.getSharedPreferences(FILE_NAME,
                 Context.MODE_PRIVATE);
 
@@ -95,7 +92,7 @@ public class SPUtils
      */
     public static void remove(String key)
     {
-        Context context = MyApplication.getContext();
+        Context context = Kudo.getContext();
         SharedPreferences sp = context.getSharedPreferences(FILE_NAME,
                 Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
@@ -108,7 +105,7 @@ public class SPUtils
      */
     public static void clear()
     {
-        Context context = MyApplication.getContext();
+        Context context = Kudo.getContext();
         SharedPreferences sp = context.getSharedPreferences(FILE_NAME,
                 Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
@@ -123,7 +120,7 @@ public class SPUtils
      */
     public static boolean contains(String key)
     {
-        Context context = MyApplication.getContext();
+        Context context = Kudo.getContext();
         SharedPreferences sp = context.getSharedPreferences(FILE_NAME,
                 Context.MODE_PRIVATE);
         return sp.contains(key);
@@ -136,7 +133,7 @@ public class SPUtils
      */
     public static Map<String, ?> getAll()
     {
-        Context context = MyApplication.getContext();
+        Context context = Kudo.getContext();
         SharedPreferences sp = context.getSharedPreferences(FILE_NAME,
                 Context.MODE_PRIVATE);
         return sp.getAll();

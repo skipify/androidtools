@@ -1,15 +1,11 @@
-package com.ifanybug.skipify.where.tools;
+package com.ifanybug.tools;
 
 import org.xutils.common.Callback;
 
 /**
  * Created by skipify on 16/1/5.
  */
-public class MyCallback<String> implements Callback.CommonCallback<String> {
-    @Override
-    public void onSuccess(String o) {
-
-    }
+public abstract class MyCallback<String> implements Callback.CommonCallback<String> {
 
     @Override
     public void onError(Throwable throwable, boolean b) {
